@@ -149,6 +149,7 @@ DEPENDENCIES
   bootstrap-sass-extras
   coffee-rails (= 4.1.0)
   devise (= 3.4.1)
+  execjs
   figaro (= 1.0.0)
   font-awesome-sass (= 4.2.2)
   friendly_id (= 5.0.4)

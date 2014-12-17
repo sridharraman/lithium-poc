@@ -1,4 +1,6 @@
 LithiumPoc::Application.routes.draw do
+  resources :archived_telematics_data
+
   resources :current_telematics_data
 
   resources :shifts

@@ -1,0 +1,62 @@
+<%- model_class = ArchivedTelematicsDatum -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:vehicle_id) %></th>
+      <th><%= model_class.human_attribute_name(:vin_number) %></th>
+      <th><%= model_class.human_attribute_name(:gps_date_time) %></th>
+      <th><%= model_class.human_attribute_name(:lat) %></th>
+      <th><%= model_class.human_attribute_name(:lon) %></th>
+      <th><%= model_class.human_attribute_name(:direction) %></th>
+      <th><%= model_class.human_attribute_name(:gps_speed) %></th>
+      <th><%= model_class.human_attribute_name(:soc) %></th>
+      <th><%= model_class.human_attribute_name(:dte) %></th>
+      <th><%= model_class.human_attribute_name(:odometer) %></th>
+      <th><%= model_class.human_attribute_name(:car_status) %></th>
+      <th><%= model_class.human_attribute_name(:hvac_status) %></th>
+      <th><%= model_class.human_attribute_name(:server_time) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @archived_telematics_data.each do |archived_telematics_datum| %>
+      <tr>
+        <td><%= archived_telematics_datum.id %></td>
+          <td><%= archived_telematics_datum.vehicle_id %></td>
+          <td><%= archived_telematics_datum.vin_number %></td>
+          <td><%= archived_telematics_datum.gps_date_time %></td>
+          <td><%= archived_telematics_datum.lat %></td>
+          <td><%= archived_telematics_datum.lon %></td>
+          <td><%= archived_telematics_datum.direction %></td>
+          <td><%= archived_telematics_datum.gps_speed %></td>
+          <td><%= archived_telematics_datum.soc %></td>
+          <td><%= archived_telematics_datum.dte %></td>
+          <td><%= archived_telematics_datum.odometer %></td>
+          <td><%= archived_telematics_datum.car_status %></td>
+          <td><%= archived_telematics_datum.hvac_status %></td>
+          <td><%= archived_telematics_datum.server_time %></td>
+        <td><%=l archived_telematics_datum.created_at, format: :long %></td>
+        <td>
+          <%= link_to archived_telematics_datum_path(archived_telematics_datum), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
+            <%= glyph 'info-sign' %>
+          <%- end -%>
+          <%= link_to edit_archived_telematics_datum_path(archived_telematics_datum), :class => 'btn btn-xs', :title => "#{ t('.edit', :default => t('helpers.links.edit')) }" do %>
+            <%= glyph 'pencil' %>
+          <%- end -%>
+          <%= link_to archived_telematics_datum_path(archived_telematics_datum), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs', :title => "#{ t('.destroy', :default => t('helpers.links.destroy')) }" do %>
+            <%= glyph 'remove' %>
+          <%- end -%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_archived_telematics_datum_path,
+            :class => 'btn btn-primary' %>

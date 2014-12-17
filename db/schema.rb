@@ -11,10 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141217064904) do
+ActiveRecord::Schema.define(version: 20141217183912) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "archived_telematics_data", force: true do |t|
+    t.integer  "vehicle_id"
+    t.string   "vin_number"
+    t.datetime "gps_date_time"
+    t.float    "lat"
+    t.float    "lon"
+    t.string   "direction"
+    t.float    "gps_speed"
+    t.float    "soc"
+    t.float    "dte"
+    t.float    "odometer"
+    t.string   "car_status"
+    t.boolean  "hvac_status"
+    t.datetime "server_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "archived_vehicle_positions", force: true do |t|
     t.integer  "vehicle_id"
@@ -37,6 +55,24 @@ ActiveRecord::Schema.define(version: 20141217064904) do
     t.datetime "updated_at"
     t.spatial  "the_curr_geom",          limit: {:srid=>32643, :type=>"point"}
     t.spatial  "the_prev_geom",          limit: {:srid=>32643, :type=>"point"}
+  end
+
+  create_table "current_telematics_data", force: true do |t|
+    t.integer  "vehicle_id"
+    t.string   "vin_number"
+    t.datetime "gps_date_time"
+    t.float    "lat"
+    t.float    "lon"
+    t.string   "direction"
+    t.float    "gps_speed"
+    t.float    "soc"
+    t.float    "dte"
+    t.float    "odometer"
+    t.string   "car_status"
+    t.boolean  "hvac_status"
+    t.datetime "server_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "current_vehicle_positions", force: true do |t|

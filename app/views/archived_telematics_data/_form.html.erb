@@ -1,4 +1,4 @@
-<%= form_for @current_telematics_datum, :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for @archived_telematics_datum, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="form-group">
     <%= f.label :vehicle_id, :class => 'control-label col-md-2' %>
     <div class="col-md-10">
@@ -82,7 +82,7 @@
     <div class='col-md-offset-2 col-md-10'>
       <%= f.submit nil, :class => 'btn btn-primary' %>
       <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                  current_telematics_data_path, :class => 'btn btn-default' %>
+                  archived_telematics_data_path, :class => 'btn btn-default' %>
     </div>
   </div>
 <% end %>

@@ -1,4 +1,4 @@
-<%- model_class = CurrentTelematicsDatum -%>
+<%- model_class = ArchivedTelematicsDatum -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
 </div>
@@ -6,41 +6,41 @@
 <div class="fieldset">
   <dl>
       <dt class="label label-default"><%= model_class.human_attribute_name(:vehicle_id) %></dt>
-      <dd><pre class="prettyprint"><%= @current_telematics_datum.vehicle_id %></pre></dd>
+      <dd><pre class="prettyprint"><%= @archived_telematics_datum.vehicle_id %></pre></dd>
       <dt class="label label-default"><%= model_class.human_attribute_name(:vin_number) %></dt>
-      <dd><pre class="prettyprint"><%= @current_telematics_datum.vin_number %></pre></dd>
+      <dd><pre class="prettyprint"><%= @archived_telematics_datum.vin_number %></pre></dd>
       <dt class="label label-default"><%= model_class.human_attribute_name(:gps_date_time) %></dt>
-      <dd><pre class="prettyprint"><%= @current_telematics_datum.gps_date_time %></pre></dd>
+      <dd><pre class="prettyprint"><%= @archived_telematics_datum.gps_date_time %></pre></dd>
       <dt class="label label-default"><%= model_class.human_attribute_name(:lat) %></dt>
-      <dd><pre class="prettyprint"><%= @current_telematics_datum.lat %></pre></dd>
+      <dd><pre class="prettyprint"><%= @archived_telematics_datum.lat %></pre></dd>
       <dt class="label label-default"><%= model_class.human_attribute_name(:lon) %></dt>
-      <dd><pre class="prettyprint"><%= @current_telematics_datum.lon %></pre></dd>
+      <dd><pre class="prettyprint"><%= @archived_telematics_datum.lon %></pre></dd>
       <dt class="label label-default"><%= model_class.human_attribute_name(:direction) %></dt>
-      <dd><pre class="prettyprint"><%= @current_telematics_datum.direction %></pre></dd>
+      <dd><pre class="prettyprint"><%= @archived_telematics_datum.direction %></pre></dd>
       <dt class="label label-default"><%= model_class.human_attribute_name(:gps_speed) %></dt>
-      <dd><pre class="prettyprint"><%= @current_telematics_datum.gps_speed %></pre></dd>
+      <dd><pre class="prettyprint"><%= @archived_telematics_datum.gps_speed %></pre></dd>
       <dt class="label label-default"><%= model_class.human_attribute_name(:soc) %></dt>
-      <dd><pre class="prettyprint"><%= @current_telematics_datum.soc %></pre></dd>
+      <dd><pre class="prettyprint"><%= @archived_telematics_datum.soc %></pre></dd>
       <dt class="label label-default"><%= model_class.human_attribute_name(:dte) %></dt>
-      <dd><pre class="prettyprint"><%= @current_telematics_datum.dte %></pre></dd>
+      <dd><pre class="prettyprint"><%= @archived_telematics_datum.dte %></pre></dd>
       <dt class="label label-default"><%= model_class.human_attribute_name(:odometer) %></dt>
-      <dd><pre class="prettyprint"><%= @current_telematics_datum.odometer %></pre></dd>
+      <dd><pre class="prettyprint"><%= @archived_telematics_datum.odometer %></pre></dd>
       <dt class="label label-default"><%= model_class.human_attribute_name(:car_status) %></dt>
-      <dd><pre class="prettyprint"><%= @current_telematics_datum.car_status %></pre></dd>
+      <dd><pre class="prettyprint"><%= @archived_telematics_datum.car_status %></pre></dd>
       <dt class="label label-default"><%= model_class.human_attribute_name(:hvac_status) %></dt>
-      <dd><pre class="prettyprint"><%= @current_telematics_datum.hvac_status %></pre></dd>
+      <dd><pre class="prettyprint"><%= @archived_telematics_datum.hvac_status %></pre></dd>
       <dt class="label label-default"><%= model_class.human_attribute_name(:server_time) %></dt>
-      <dd><pre class="prettyprint"><%= @current_telematics_datum.server_time %></pre></dd>
+      <dd><pre class="prettyprint"><%= @archived_telematics_datum.server_time %></pre></dd>
   </dl>
 </div>
 
 <div class="form-group">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              current_telematics_data_path, :class => 'btn btn-default'  %>
+              archived_telematics_data_path, :class => 'btn btn-default'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_current_telematics_datum_path(@current_telematics_datum), :class => 'btn btn-default' %>
+              edit_archived_telematics_datum_path(@archived_telematics_datum), :class => 'btn btn-default' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              current_telematics_datum_path(@current_telematics_datum),
+              archived_telematics_datum_path(@archived_telematics_datum),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
