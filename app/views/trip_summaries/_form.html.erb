@@ -1,0 +1,52 @@
+<%= form_for @trip_summary, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="form-group">
+    <%= f.label :trip_id, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :trip_id, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :distance, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :distance, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :time_of_departure, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :time_of_departure, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :time_of_arrival, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :time_of_arrival, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :start_soc, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :start_soc, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :end_soc, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :end_soc, :class => 'text_field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :average_speed, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :average_speed, :class => 'text_field form-control' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  trip_summaries_path, :class => 'btn btn-default' %>
+    </div>
+  </div>
+<% end %>

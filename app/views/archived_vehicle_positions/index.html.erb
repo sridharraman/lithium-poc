@@ -1,0 +1,55 @@
+<h1>Listing archived_vehicle_positions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vehicle</th>
+      <th>Trip</th>
+      <th>Curr lat</th>
+      <th>Curr lon</th>
+      <th>Curr timestamp</th>
+      <th>Prev lat</th>
+      <th>Prev lon</th>
+      <th>Heading</th>
+      <th>Speed</th>
+      <th>Altitude</th>
+      <th>Accuracy</th>
+      <th>Soc</th>
+      <th>Dte</th>
+      <th>Odometer reading</th>
+      <th>Distance from previous</th>
+      <th>Distance covered</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @archived_vehicle_positions.each do |archived_vehicle_position| %>
+      <tr>
+        <td><%= archived_vehicle_position.vehicle_id %></td>
+        <td><%= archived_vehicle_position.trip_id %></td>
+        <td><%= archived_vehicle_position.curr_lat %></td>
+        <td><%= archived_vehicle_position.curr_lon %></td>
+        <td><%= archived_vehicle_position.curr_timestamp %></td>
+        <td><%= archived_vehicle_position.prev_lat %></td>
+        <td><%= archived_vehicle_position.prev_lon %></td>
+        <td><%= archived_vehicle_position.heading %></td>
+        <td><%= archived_vehicle_position.speed %></td>
+        <td><%= archived_vehicle_position.altitude %></td>
+        <td><%= archived_vehicle_position.accuracy %></td>
+        <td><%= archived_vehicle_position.soc %></td>
+        <td><%= archived_vehicle_position.dte %></td>
+        <td><%= archived_vehicle_position.odometer_reading %></td>
+        <td><%= archived_vehicle_position.distance_from_previous %></td>
+        <td><%= archived_vehicle_position.distance_covered %></td>
+        <td><%= link_to 'Show', archived_vehicle_position %></td>
+        <td><%= link_to 'Edit', edit_archived_vehicle_position_path(archived_vehicle_position) %></td>
+        <td><%= link_to 'Destroy', archived_vehicle_position, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Archived vehicle position', new_archived_vehicle_position_path %>

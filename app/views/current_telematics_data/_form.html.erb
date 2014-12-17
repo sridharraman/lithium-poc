@@ -1,0 +1,69 @@
+<%= form_for(@current_telematics_datum) do |f| %>
+  <% if @current_telematics_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@current_telematics_datum.errors.count, "error") %> prohibited this current_telematics_datum from being saved:</h2>
+
+      <ul>
+      <% @current_telematics_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :vehicle_id %><br>
+    <%= f.number_field :vehicle_id %>
+  </div>
+  <div class="field">
+    <%= f.label :vin_number %><br>
+    <%= f.text_field :vin_number %>
+  </div>
+  <div class="field">
+    <%= f.label :gps_date_time %><br>
+    <%= f.datetime_select :gps_date_time %>
+  </div>
+  <div class="field">
+    <%= f.label :lat %><br>
+    <%= f.text_field :lat %>
+  </div>
+  <div class="field">
+    <%= f.label :lon %><br>
+    <%= f.text_field :lon %>
+  </div>
+  <div class="field">
+    <%= f.label :direction %><br>
+    <%= f.text_field :direction %>
+  </div>
+  <div class="field">
+    <%= f.label :gps_speed %><br>
+    <%= f.text_field :gps_speed %>
+  </div>
+  <div class="field">
+    <%= f.label :soc %><br>
+    <%= f.text_field :soc %>
+  </div>
+  <div class="field">
+    <%= f.label :dte %><br>
+    <%= f.text_field :dte %>
+  </div>
+  <div class="field">
+    <%= f.label :odometer %><br>
+    <%= f.text_field :odometer %>
+  </div>
+  <div class="field">
+    <%= f.label :car_status %><br>
+    <%= f.text_field :car_status %>
+  </div>
+  <div class="field">
+    <%= f.label :hvac_status %><br>
+    <%= f.check_box :hvac_status %>
+  </div>
+  <div class="field">
+    <%= f.label :server_time %><br>
+    <%= f.datetime_select :server_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

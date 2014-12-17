@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vehicle:</strong>
+  <%= @archived_vehicle_position.vehicle_id %>
+</p>
+
+<p>
+  <strong>Trip:</strong>
+  <%= @archived_vehicle_position.trip_id %>
+</p>
+
+<p>
+  <strong>Curr lat:</strong>
+  <%= @archived_vehicle_position.curr_lat %>
+</p>
+
+<p>
+  <strong>Curr lon:</strong>
+  <%= @archived_vehicle_position.curr_lon %>
+</p>
+
+<p>
+  <strong>Curr timestamp:</strong>
+  <%= @archived_vehicle_position.curr_timestamp %>
+</p>
+
+<p>
+  <strong>Prev lat:</strong>
+  <%= @archived_vehicle_position.prev_lat %>
+</p>
+
+<p>
+  <strong>Prev lon:</strong>
+  <%= @archived_vehicle_position.prev_lon %>
+</p>
+
+<p>
+  <strong>Heading:</strong>
+  <%= @archived_vehicle_position.heading %>
+</p>
+
+<p>
+  <strong>Speed:</strong>
+  <%= @archived_vehicle_position.speed %>
+</p>
+
+<p>
+  <strong>Altitude:</strong>
+  <%= @archived_vehicle_position.altitude %>
+</p>
+
+<p>
+  <strong>Accuracy:</strong>
+  <%= @archived_vehicle_position.accuracy %>
+</p>
+
+<p>
+  <strong>Soc:</strong>
+  <%= @archived_vehicle_position.soc %>
+</p>
+
+<p>
+  <strong>Dte:</strong>
+  <%= @archived_vehicle_position.dte %>
+</p>
+
+<p>
+  <strong>Odometer reading:</strong>
+  <%= @archived_vehicle_position.odometer_reading %>
+</p>
+
+<p>
+  <strong>Distance from previous:</strong>
+  <%= @archived_vehicle_position.distance_from_previous %>
+</p>
+
+<p>
+  <strong>Distance covered:</strong>
+  <%= @archived_vehicle_position.distance_covered %>
+</p>
+
+<%= link_to 'Edit', edit_archived_vehicle_position_path(@archived_vehicle_position) %> |
+<%= link_to 'Back', archived_vehicle_positions_path %>

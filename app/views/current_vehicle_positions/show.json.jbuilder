@@ -1,0 +1,1 @@
+json.extract! @current_vehicle_position, :id, :vehicle_id, :trip_id, :curr_lat, :curr_lon, :curr_timestamp, :prev_lat, :prev_lon, :heading, :speed, :altitude, :accuracy, :soc, :dte, :odometer_reading, :distance_from_previous, :distance_covered, :created_at, :updated_at

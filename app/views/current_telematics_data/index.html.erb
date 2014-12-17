@@ -1,0 +1,49 @@
+<h1>Listing current_telematics_data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Vehicle</th>
+      <th>Vin number</th>
+      <th>Gps date time</th>
+      <th>Lat</th>
+      <th>Lon</th>
+      <th>Direction</th>
+      <th>Gps speed</th>
+      <th>Soc</th>
+      <th>Dte</th>
+      <th>Odometer</th>
+      <th>Car status</th>
+      <th>Hvac status</th>
+      <th>Server time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @current_telematics_data.each do |current_telematics_datum| %>
+      <tr>
+        <td><%= current_telematics_datum.vehicle_id %></td>
+        <td><%= current_telematics_datum.vin_number %></td>
+        <td><%= current_telematics_datum.gps_date_time %></td>
+        <td><%= current_telematics_datum.lat %></td>
+        <td><%= current_telematics_datum.lon %></td>
+        <td><%= current_telematics_datum.direction %></td>
+        <td><%= current_telematics_datum.gps_speed %></td>
+        <td><%= current_telematics_datum.soc %></td>
+        <td><%= current_telematics_datum.dte %></td>
+        <td><%= current_telematics_datum.odometer %></td>
+        <td><%= current_telematics_datum.car_status %></td>
+        <td><%= current_telematics_datum.hvac_status %></td>
+        <td><%= current_telematics_datum.server_time %></td>
+        <td><%= link_to 'Show', current_telematics_datum %></td>
+        <td><%= link_to 'Edit', edit_current_telematics_datum_path(current_telematics_datum) %></td>
+        <td><%= link_to 'Destroy', current_telematics_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Current telematics datum', new_current_telematics_datum_path %>

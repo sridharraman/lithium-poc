@@ -1,0 +1,13 @@
+id,vehicle_id,employee_id,address,phone_number,origin,destination,estimated_distance,estimated_start_time,estimated_end_time,estimated_start_soc,estimated_end_soc,hvac_status,shift_id
+1,1,EMP-001,Electronics City,1111111111,Bommasandra,Electronics City,5,09:00:00,09:30:00,100,90,false,1
+2,1,EMP-002,HSR Layout,2222222222,Electronics City,HSR Layout,12,09:35:00,10:30:00,90,75,false,1
+3,1,EMP-003,Marathahalli,3333333333,HSR Layout,Marathahalli,15,10:35:00,11:30:00,75,50,true,1
+4,1,OFFICE,ITPL,,Marathahalli,ITPL,8,11:35:00,12:00:00,50,42,true,1
+5,1,EMP-007,Marathahalli,7777777777,ITPL,Marathahalli,8,14:00:00,14:30:00,80,72,false,2
+6,1,EMP-008,Doddanekkundi,8888888888,Marathahalli,Doddanekkundi,4,14:35:00,14:55:00,72,68,false,2
+7,1,EMP-009,KR Puram,9999999999,Doddanekkundi,KR Puram,5,15:00:00,15:25:00,68,60,false,2
+8,1,OFFICE,ITPL,,KR Puram,ITPL,7,15:30:00,16:00:00,60,52,false,2
+9,2,EMP-004,Gottigere,4444444444,Bommasandra,Gottigere,15,09:00:00,10:00:00,100,80,true,3
+10,2,EMP-005,JP Nagar 6th Phase,5555555555,Gottigere,JP Nagar 6th Phase,12,10:05:00,11:00:00,80,70,false,3
+11,2,EMP-006,BTM Layout,6666666666,JP Nagar 6th Phase,BTM Layout,10,11:05:00,11:40:00,70,60,true,3
+12,2,OFFICE,ITPL,,BTM Layout,ITPL,18,11:45:00,13:00:00,60,40,false,3

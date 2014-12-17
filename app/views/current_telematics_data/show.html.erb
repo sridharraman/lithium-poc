@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vehicle:</strong>
+  <%= @current_telematics_datum.vehicle_id %>
+</p>
+
+<p>
+  <strong>Vin number:</strong>
+  <%= @current_telematics_datum.vin_number %>
+</p>
+
+<p>
+  <strong>Gps date time:</strong>
+  <%= @current_telematics_datum.gps_date_time %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @current_telematics_datum.lat %>
+</p>
+
+<p>
+  <strong>Lon:</strong>
+  <%= @current_telematics_datum.lon %>
+</p>
+
+<p>
+  <strong>Direction:</strong>
+  <%= @current_telematics_datum.direction %>
+</p>
+
+<p>
+  <strong>Gps speed:</strong>
+  <%= @current_telematics_datum.gps_speed %>
+</p>
+
+<p>
+  <strong>Soc:</strong>
+  <%= @current_telematics_datum.soc %>
+</p>
+
+<p>
+  <strong>Dte:</strong>
+  <%= @current_telematics_datum.dte %>
+</p>
+
+<p>
+  <strong>Odometer:</strong>
+  <%= @current_telematics_datum.odometer %>
+</p>
+
+<p>
+  <strong>Car status:</strong>
+  <%= @current_telematics_datum.car_status %>
+</p>
+
+<p>
+  <strong>Hvac status:</strong>
+  <%= @current_telematics_datum.hvac_status %>
+</p>
+
+<p>
+  <strong>Server time:</strong>
+  <%= @current_telematics_datum.server_time %>
+</p>
+
+<%= link_to 'Edit', edit_current_telematics_datum_path(@current_telematics_datum) %> |
+<%= link_to 'Back', current_telematics_data_path %>
