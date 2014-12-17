@@ -25,6 +25,7 @@ gem 'font-awesome-sass', '4.2.2'
 
 # Bootstrap 3: https://github.com/twbs/bootstrap-sass
 gem 'bootstrap-sass', '3.3.1.0'
+gem 'bootstrap-sass-extras'
 
 # Figaro: https://github.com/laserlemon/figaro
 group :development, :test do
@@ -33,6 +34,17 @@ end
 
 # PostgreSQL
 gem 'pg'
+# gem 'spatial_adapter'
+gem 'activerecord-postgis-adapter'
 
 # Devise: https://github.com/plataformatec/devise
 gem 'devise', '3.4.1'
+
+# geokit, geokit-rails (for reverse-geocoding)
+gem "geokit", "1.6.5"
+gem 'geokit-rails', "1.1.4"
+
+# api
+# gem 'rocket_pants', '~> 1.0'
+# gem 'apipie-rails'
+gem 'rabl-rails'
