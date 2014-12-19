@@ -42,6 +42,6 @@ class ShiftsController < ApplicationController
     end
 
     def shift_params
-      params.require(:shift).permit(:vehicle_id, :days_of_the_week)
+      params.require(:shift).permit(:vehicle_id, :days_of_the_week, :shift_type)
     end
 end
