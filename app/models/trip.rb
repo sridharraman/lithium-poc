@@ -10,4 +10,12 @@ class Trip < ActiveRecord::Base
     # ---
     where(vehicle_id: vehicle_id)
   end
+
+  def estimated_soc_difference
+    estimated_start_soc - estimated_end_soc
+  end
+
+  def estimated_travel_duration
+    estimated_end_time - estimated_start_time
+  end
 end

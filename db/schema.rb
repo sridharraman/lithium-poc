@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141217183912) do
+ActiveRecord::Schema.define(version: 20141218062051) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20141217183912) do
     t.datetime "updated_at"
     t.spatial  "the_curr_geom",          limit: {:srid=>32643, :type=>"point"}
     t.spatial  "the_prev_geom",          limit: {:srid=>32643, :type=>"point"}
+    t.integer  "telematics_data_id"
   end
 
   create_table "current_telematics_data", force: true do |t|
@@ -96,6 +97,7 @@ ActiveRecord::Schema.define(version: 20141217183912) do
     t.datetime "updated_at"
     t.spatial  "the_curr_geom",          limit: {:srid=>32643, :type=>"point"}
     t.spatial  "the_prev_geom",          limit: {:srid=>32643, :type=>"point"}
+    t.integer  "telematics_data_id"
   end
 
   create_table "friendly_id_slugs", force: true do |t|
@@ -116,6 +118,7 @@ ActiveRecord::Schema.define(version: 20141217183912) do
     t.boolean  "days_of_the_week", default: [true, true, true, true, true, true, true], array: true
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "shift_type"
   end
 
   create_table "trip_summaries", force: true do |t|
@@ -180,6 +183,7 @@ ActiveRecord::Schema.define(version: 20141217183912) do
     t.string   "registration_number"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "vin_number"
   end
 
 end

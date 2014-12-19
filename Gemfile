@@ -49,3 +49,6 @@ gem 'geokit-rails', "1.1.4"
 # gem 'rocket_pants', '~> 1.0'
 # gem 'apipie-rails'
 gem 'rabl-rails'
+
+# date-time-related
+gem 'chronic_duration'

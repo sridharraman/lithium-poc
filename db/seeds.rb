@@ -18,7 +18,15 @@ SEED_DIR = "db/seeds/"
 # CSV.foreach(SEED_DIR + 'vehicles.csv', :headers => true) do |row| Vehicle.create!(row.to_hash) end
 
 # Shifts
-CSV.foreach(SEED_DIR + 'shifts.csv', :headers => true) do |row| Shift.create!(row.to_hash) end
+# CSV.foreach(SEED_DIR + 'shifts.csv', :headers => true) do |row| Shift.create!(row.to_hash) end
 
-# Trips
-CSV.foreach(SEED_DIR + 'trips.csv', :headers => true) do |row| Trip.create!(row.to_hash) end
+# # Trips
+# CSV.foreach(SEED_DIR + 'trips.csv', :headers => true) do |row| Trip.create!(row.to_hash) end
+
+# Current Vehicle Positions
+CSV.foreach(SEED_DIR + 'current_vehicle_positions.csv',
+  :headers => true) do |row| CurrentVehiclePosition.create!(row.to_hash) end
+
+# Archived Vehicle Positions
+CSV.foreach(SEED_DIR + 'archived_vehicle_positions.csv',
+  :headers => true) do |row| ArchivedVehiclePosition.create!(row.to_hash) end
