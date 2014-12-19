@@ -8,6 +8,7 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:registration_number) %></th>
+      <th><%= model_class.human_attribute_name(:vin_number) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -18,6 +19,7 @@
         <td><%= vehicle.id %></td>
           <td><%= vehicle.name %></td>
           <td><%= vehicle.registration_number %></td>
+          <td><%= vehicle.vin_number %></td>
         <td><%=l vehicle.created_at, format: :long %></td>
         <td>
           <%= link_to vehicle_path(vehicle), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
